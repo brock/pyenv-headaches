@@ -59,4 +59,24 @@ pyenv install 3.7.2
 pyenv versions
 ```
 
+Now to set it up in a project that has a Pipfile with a requires block for `python_version` 3.6, I need to make sure that in the project directory I run:
+
+```
+pyenv local 3.6.8
+pipenv install --dev
+```
+
+Oh yeah, I haven't installed `pipenv` in 3.6.8 yet.
+
+```
+pip install pipenv
+```
+
+Okay, that installed, but I'm still not able to load the environment correctly. Do some more digging... Found [this article](https://click.palletsprojects.com/en/7.x/python3/) that says if you are using Click with Python3 need to set LC_ALL and LANG exports, so added this to dotfiles:
+
+```
+export LC_ALL=en_US.utf-8
+export LANG=en_US.utf-8
+```
+
 :thumbsup: *for now*
