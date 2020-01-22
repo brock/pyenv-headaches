@@ -199,4 +199,6 @@ This led me to a solution that I think more people need to be aware of:
 
 This immediately solved my problem. I found that on [this article](https://amaral.northwestern.edu/blog/troubleshooting-pyenv). 
 
+## 2020-01-22
 
+I'm now no longer recommending `brew install pyenv`, it just complicates things too much in my opinion. Use their installer and install pyenv to your home directory at `~/.pyenv` and things (in general) seem to get a lot better.
